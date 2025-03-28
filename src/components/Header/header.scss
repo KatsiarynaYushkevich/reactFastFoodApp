@@ -1,0 +1,24 @@
+@use "../../style/index.scss" as *;
+
+header{
+  margin-bottom: 120px;
+}
+.header_wrapper {
+  background-image: url("../../assets/header_assets/circle_bg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: initial;
+  min-height: 466px;
+  margin-bottom: 33px;
+}
+
+.header_content{
+  display: flex;
+  align-items: center;
+}
+
+.header_nav{
+  max-width: 1231px;
+  display: flex;
+  justify-content: space-between;
+}
