@@ -1,3 +1,5 @@
+@use "./vars/_vars.scss" as *;
+
 *{
   padding: 0;
   margin: 0;
@@ -5,16 +7,8 @@
 }
 
 body{
-  background-color: #F9F9F9;
+  background-color: $body_bg_color;
 }
-$main_font:'Nunito';
-$main_text_color: #000;
-$sub_text_color: #B1B1B1;
-$third_text_color:#fff;
-$field_color: #F2F2F3;
-$cart_bg_color:#fff;
-$cart_btn_color:#FF7020;
-
 
 @mixin text_style($f_size:16px, $f_weight:400, $f_color:$main_text_color){
   font-family: $main_font;
@@ -23,22 +17,14 @@ $cart_btn_color:#FF7020;
   color:$f_color;
 }
 
-@font-face {
-  font-family: "Nunito";
-  font-weight: 400;
-  src: url("../assets/fonts/Nunito-Regular.ttf") format("truetype");
+@mixin flex_style($f_direction: row){
+  display: flex;
+  flex-direction: $f_direction;
 }
 
-@font-face {
-  font-family: "Nunito";
-  font-weight: 600;
-  src: url("../assets/fonts/Nunito-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Nunito";
-  font-weight: 800;
-  src: url("../assets/fonts/Nunito-ExtraBold.ttf") format("truetype");
+@mixin flex_items_pos($j_content:center, $a_items:center){
+  align-items:  $a_items;
+  justify-content: $j_content;
 }
 
 .container{

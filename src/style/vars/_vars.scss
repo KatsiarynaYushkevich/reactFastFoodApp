@@ -1,0 +1,33 @@
+$main_font:'Nunito';
+$main_text_color: #000;
+$sub_text_color: #B1B1B1;
+$third_text_color:#fff;
+
+$body_bg_color:#F9F9F9;
+
+$header_main_text_color: #fff;
+$header_sub_text_color:#FF5C00;
+
+$field_color: #F2F2F3;
+$cart_bg_color:#fff;
+$cart_btn_color:#FF7020;
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: 400;
+  src: url("../../assets/fonts/Nunito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: 600;
+  src: url("../../assets/fonts/Nunito-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: 800;
+  src: url("../../assets/fonts/Nunito-ExtraBold.ttf") format("truetype");
+}
+
+
