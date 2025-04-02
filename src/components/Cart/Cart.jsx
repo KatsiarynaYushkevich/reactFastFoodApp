@@ -1,64 +1,56 @@
-import cartItemData from "../../data/cartItemsData.json";
+import cartItemData from "../../data/cartServer.json"
 import delivery from "../../assets/delivery.svg"
 import "./cart.scss"
-import {useEffect, useState} from "react";
-import CartItem from "../CartItem/CartItem.jsx";
+import {changeQuantity} from "./helper/helper.js"
 
-export default function Cart() {
-    const [activeCartItem, setActiveCartItem] = useState(null);
+export default function Cart({stateCart}) {
+    const {cart, setCart} = stateCart;
+    const itemsCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const price = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-    function handleClick(index) {
-        setActiveCartItem(index === activeCartItem ? null : index)
-    }
+    const showDelivery = itemsCount > 7 || price > 2500;
 
-    const [totalPrice, setTotalPrice] = useState(911.5); // тут ошибка
-    const [totalItems, setTotalItems] = useState(3);
 
-    const changeTotal = (newTotalItems, newTotalPrice) => {
-        setTotalItems(newTotalItems);
-        setTotalPrice(newTotalPrice);
-    };
-
-    useEffect(() =>{
-     (totalItems> 7 || totalPrice > 2500) ?
-         document.querySelector('.delivery').style.display='flex' :
-         document.querySelector('.delivery').style.display='none';
-    }, [totalPrice, totalItems])
-
-    return (
-        <div className='cart_wrapper'>
+    return (<div className='cart_wrapper'>
+        <div className='cart_block'>
             <div className='cart'>
                 <div className='items_counter'>
                     <span id='cart'>Корзина</span>
-                    <span id='total_items'>{totalItems}</span>
+                    <span id='total_items'>{itemsCount}</span>
                 </div>
                 <div className='cart_items'>
                     {cartItemData.map((item) => (
-                        <CartItem
-                            key={item.id}
-                            img={item.img}
-                            name={item.name}
-                            price={item.price}
-                            weight={item.weight}
-                            active={item.id === activeCartItem}
-                            onClick={() => handleClick(item.id)}
-                            totalItems={totalItems}
-                            totalPrice={totalPrice}
-                            changeTotalValues={changeTotal}
-                        />
-
-                    ))}
+                        <div className='item' key={item.id}>
+                            <div className='item_block'>
+                                <div className='item_img'>
+                                    <img src={item.img} alt={item.name}/>
+                                </div>
+                                <div className='item_info'>
+                                    <div>
+                                        <p>{item.name}</p>
+                                        <span id='weight'>{item.weight}г</span>
+                                    </div>
+                                    <span>{item.price}₽</span>
+                                </div>
+                            </div>
+                            <div className='buttons'>
+                                <button id='decrease_btn' onClick={() => changeQuantity(item.id, -1, cart, setCart)}>-</button>
+                                <span>{itemsCount}</span>
+                                <button onClick={() => changeQuantity(item.id, 1, cart, setCart)}>+</button>
+                            </div>
+                        </div>))}
                 </div>
                 <div className='final_price'>
                     <span>Итого</span>
-                    <span>{totalPrice}</span>
+                    <span>{price}</span>
                 </div>
                 <button id='order_btn'>Оформить заказ</button>
-                <div className='hidden delivery'>
-                    <img src={delivery}/>
-                    <p>Бесплатная доставка</p>
-                </div>
+                {showDelivery && (
+                    <div className='delivery'>
+                        <img src={delivery}/>
+                        <p>Бесплатная доставка</p>
+                    </div>)}
             </div>
         </div>
-    );
+    </div>);
 }

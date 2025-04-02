@@ -1,0 +1,54 @@
+{
+  "burgers": {
+    "title": "Бургеры",
+    "items": {
+      "img": "/src/assets/burger_img.png",
+      "name": "Супер сырный",
+      "price": "550",
+      "weight": "512",
+      "quantity": "1",
+      "id": "2"
+    }
+  },
+  "snacks": {
+    "title": "Пиццы",
+    "items": {
+    }
+  },
+  "hotdogs": {
+    "title": "Хотдоги",
+    "items": {
+    }
+  },
+  "combo": {
+    "title": "Комбо",
+    "items": {
+    }
+  },
+  "burritos": {
+    "title": "Шаурма",
+    "items": {
+    }
+},
+  "pizzas": {
+    "title": "Пиццы",
+    "items": {
+    }
+  }
+    ,
+  "noodles": {
+    "title": "Вок",
+    "items": {
+    }
+  },
+  "deserts": {
+    "title": "Десерты",
+    "items": {
+    }
+  },
+  "sauces": {
+    "title": "Соусы",
+    "items": {
+    }
+  }
+}

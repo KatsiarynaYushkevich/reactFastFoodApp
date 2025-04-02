@@ -1,10 +1,6 @@
 @use "../../style/index.scss" as *;
 @use "../../style/vars/_vars.scss" as *;
 
-header {
-  margin-bottom: 120px;
-}
-
 .header_wrapper {
   background-image: url("../../assets/header_assets/circle_bg.png");
   background-position: bottom;
@@ -55,24 +51,3 @@ header {
   }
 }
 
-.header_nav {
-  max-width: 1231px;
-  display: flex;
-  justify-content: space-between;
-  overflow-x: auto;
-  gap: 8px;
-
-  a {
-    @include flex_style();
-    @include flex_items_pos();
-    @include text_style(clamp(12px, 1vw + 2px, 16px));
-    gap: 8px;
-
-    span{
-      white-space: nowrap;
-    }
-  }
-}
-.header_nav::-webkit-scrollbar {
-  display: none;
-}

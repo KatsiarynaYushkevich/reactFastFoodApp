@@ -2,6 +2,11 @@
 @use "../../style/vars/_vars.scss" as *;
 
 .cart_wrapper{
+  padding-top: 120px;
+}
+
+.cart_block{
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +15,6 @@
   border-radius: 18px;
   background-color: $cart_bg_color;
 }
-
 .cart {
   min-width: 268px;
   min-height: 420px;
@@ -70,6 +74,53 @@
   @include text_style(12px);
 }
 
-.hidden{
+.item_img{
+  max-height: 52px;
+  max-width: 64px;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}
 
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 84px;
+  border-bottom: 1px solid $field_color;
+  border-top: 1px solid $field_color;
+}
+
+.item_block{
+  display: flex;
+  gap:6px;
+}
+.item_info{
+  @include text_style(12px);
+  display: flex;
+  flex-direction: column;
+  gap:6px;
+
+  #weight{
+    color: $sub_text_color;
+  }
+}
+
+.buttons{
+  @include text_style();
+  background-color: $field_color;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:18px;
+  min-height: 40px;
+  min-width: 84px;
+
+  button{
+    background-color: transparent;
+    border: none;
+  }
 }

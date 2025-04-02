@@ -1,0 +1,23 @@
+@use "../../style/index.scss" as *;
+@use "../../style/vars/_vars.scss" as *;
+
+.nav_item {
+  border-radius: 50px;
+  background-color:$header_nav_btn_color;
+  min-height: 40px;
+  min-width: 123px;
+  @include flex_style();
+  @include flex_items_pos();
+  @include text_style(clamp(12px, 1vw + 2px, 16px));
+  gap: 8px;
+
+  span{
+    white-space: nowrap;
+  }
+
+  &.active{
+    background-color: $header_nav_btn_hover;
+  }
+}
+
+

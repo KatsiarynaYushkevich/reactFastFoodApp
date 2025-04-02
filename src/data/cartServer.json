@@ -1,16 +1,18 @@
 [
   {
-    "img": "burger_img.png",
+    "img": "/src/assets/burger_img.png",
     "name": "Супер сырный",
     "price": "550",
     "weight": "512",
-    "id": "1"
+    "quantity": 1,
+    "id":"1"
   },
   {
-    "img": "../../assets/burger_img.png",
+    "img": "/src/assets/burger_img.png",
     "name": "Картошка фри",
     "price": "122.5",
     "weight": "90",
+    "quantity": 1,
     "id": "2"
   },
   {
@@ -18,6 +20,7 @@
     "name": "Жгучий хот-дог",
     "price": "239",
     "weight": "245",
+    "quantity": 1,
     "id": "3"
   }
 ]

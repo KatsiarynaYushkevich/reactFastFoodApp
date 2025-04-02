@@ -1,0 +1,11 @@
+.header_nav {
+  max-width: 1231px;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  gap: 8px;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
