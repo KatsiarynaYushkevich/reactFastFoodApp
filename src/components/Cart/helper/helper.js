@@ -1,6 +1,6 @@
 export const changeQuantity = (id, change,cart,setCart) => {
     const currItemQuantity = cart.find(item => item.id == id).quantity;
-    if(currItemQuantity === 1 && change === -1){
+    if(currItemQuantity == 1 && change === -1){
         setCart(cart.filter(item => item.id !== id));
         return;
     }

@@ -34,8 +34,9 @@ export default function Cart({stateCart}) {
                                 </div>
                             </div>
                             <div className='buttons'>
-                                <button id='decrease_btn' onClick={() => changeQuantity(item.id, -1, cart, setCart)}>-</button>
-                                <span>{itemsCount}</span>
+                                <button id='decrease_btn' onClick={() => changeQuantity(item.id, -1, cart, setCart)}>-
+                                </button>
+                                <span>{item.quantity}</span>
                                 <button onClick={() => changeQuantity(item.id, 1, cart, setCart)}>+</button>
                             </div>
                         </div>))}

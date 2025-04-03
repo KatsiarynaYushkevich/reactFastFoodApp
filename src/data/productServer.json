@@ -1,54 +1,287 @@
 {
   "burgers": {
     "title": "Бургеры",
-    "items": {
-      "img": "/src/assets/burger_img.png",
-      "name": "Супер сырный",
-      "price": "550",
-      "weight": "512",
-      "quantity": "1",
-      "id": "2"
-    }
+    "items": [
+      {
+        "img": "/src/assets/burgers/meat_burger.png",
+        "name": "Мясная бомба",
+        "price": "689",
+        "weight": "520",
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "img": "/src/assets/burgers/cheese_burger.png",
+        "name": "Супер сырный",
+        "price": "550",
+        "weight": "512",
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "img": "/src/assets/burgers/full_burger.png",
+        "name": "Сытный",
+        "price": "639",
+        "weight": "580",
+        "quantity": 1,
+        "id": "3"
+      },
+      {
+        "img": "/src/assets/burgers/punch_burger.png",
+        "name": "Тяжелый удар",
+        "price": "480",
+        "weight": "470",
+        "quantity": 1,
+        "id": "4"
+      },
+      {
+        "img": "/src/assets/burgers/classic_burger.png",
+        "name": "Вечная классика",
+        "price": "450",
+        "weight": "450",
+        "quantity": 1,
+        "id": "5"
+      },
+      {
+        "img": "/src/assets/burgers/italian_burger.png",
+        "name": "Итальянский",
+        "price": "560",
+        "weight": "510",
+        "quantity": 1,
+        "id": "6"
+      }
+    ]
   },
   "snacks": {
-    "title": "Пиццы",
-    "items": {
-    }
+    "title": "Закуски",
+    "items": [
+      {
+        "img": "/src/assets/snacks/nachos.png",
+        "name": "Начос",
+        "price": "250",
+        "weight": "220",
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "img": "/src/assets/snacks/french_fries.png",
+        "name": "Картошка фри",
+        "price": "245",
+        "weight": "180",
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "img": "/src/assets/snacks/onion_rings.png",
+        "name": "Луковые кольца",
+        "price": "230",
+        "weight": "160",
+        "quantity": 1,
+        "id": "3"
+      }
+    ]
   },
   "hotdogs": {
     "title": "Хотдоги",
-    "items": {
-    }
+    "items": [
+      {
+        "img": "/src/assets/hotdogs/home_hotdog.png",
+        "name": "Домашний хот-дог",
+        "price": "290",
+        "weight": "250",
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "img": "/src/assets/hotdogs/spicy_hotdog.png",
+        "name": "Жгучий хот-дог",
+        "price": "239",
+        "weight": "245",
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "img": "/src/assets/hotdogs/classic_hotdog.png",
+        "name": "Классический хот-дог",
+        "price": "220",
+        "weight": "215",
+        "quantity": 1,
+        "id": "3"
+      }
+    ]
   },
   "combo": {
     "title": "Комбо",
-    "items": {
-    }
+    "items": [
+      {
+        "img": "/src/assets/combos/combo1.jpg",
+        "name": "Комбо №1",
+        "price": "480",
+        "weight": "260",
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "img": "/src/assets/combos/combo2.jpg",
+        "name": "Комбо №2",
+        "price": "465",
+        "weight": "253",
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "img": "/src/assets/combos/combo3.jpg",
+        "name": "Комбо №3",
+        "price": "538",
+        "weight": "270",
+        "quantity": 1,
+        "id": "3"
+      }
+    ]
   },
   "burritos": {
     "title": "Шаурма",
-    "items": {
-    }
-},
+    "items": [
+        {
+          "img": "/src/assets/pizzas/chiсken_pizza.jpg",
+          "name": "Стандартная",
+          "price": "520",
+          "weight": "590",
+          "quantity": 1,
+          "id": "1"
+        },
+        {
+          "img": "/src/assets/pizzas/meat_pizza.jpg",
+          "name": "Мясная",
+          "price": "625",
+          "weight": "605",
+          "quantity": 1,
+          "id": "2"
+        },
+        {
+          "img": "/src/assets/pizzas/pepperoni.jpg",
+          "name": "Пепперони",
+          "price": "520",
+          "weight": "535",
+          "quantity": 1,
+          "id": "3"
+        }
+    ]
+  },
   "pizzas": {
     "title": "Пиццы",
-    "items": {
-    }
-  }
-    ,
+    "items": [
+      {
+        "img": "/src/assets/pizzas/chiсken_pizza.jpg",
+        "name": "Чикен карри",
+        "price": "520",
+        "weight": "590",
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "img": "/src/assets/pizzas/meat_pizza.jpg",
+        "name": "Мясная",
+        "price": "625",
+        "weight": "605",
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "img": "/src/assets/pizzas/pepperoni.jpg",
+        "name": "Пепперони",
+        "price": "520",
+        "weight": "535",
+        "quantity": 1,
+        "id": "3"
+      }
+    ]
+  },
   "noodles": {
     "title": "Вок",
-    "items": {
-    }
+    "items": [
+      {
+        "img": "/src/assets/wok/sweet_sour_wok.jpg",
+        "name": "WOK кисло-сладкий",
+        "price": "430",
+        "weight": "320",
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "img": "/src/assets/wok/chicken_wok.jpg",
+        "name": "WOK с курицей",
+        "price": "410",
+        "weight": "320",
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "img": "/src/assets/wok/oyakidon_wok.jpg",
+        "name": "Оякидон",
+        "price": "400",
+        "weight": "320",
+        "quantity": 1,
+        "id": "3"
+      }
+    ]
   },
   "deserts": {
     "title": "Десерты",
-    "items": {
-    }
+    "items": [
+      {
+        "img": "/src/assets/deserts/cherry_bun.png",
+        "name": "Пирожок вишневый",
+        "price": "103",
+        "weight": "70",
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "img": "/src/assets/deserts/berry_bun.png",
+        "name": "Пирожок лесные ягоды крем-чиз",
+        "price": "103",
+        "weight": "82",
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "img": "/src/assets/deserts/strawberry_donut.png",
+        "name": "Донат клубника",
+        "price": "103",
+        "weight": "70",
+        "quantity": 1,
+        "id": "3"
+      }
+    ]
   },
   "sauces": {
     "title": "Соусы",
-    "items": {
-    }
+    "items": [
+      {
+        "img": "/src/assets/pizzas/chiсken_pizza.jpg",
+        "name": "Чикен карри",
+        "price": "520",
+        "weight": "590",
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "img": "/src/assets/pizzas/meat_pizza.jpg",
+        "name": "Мясная",
+        "price": "625",
+        "weight": "605",
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "img": "/src/assets/pizzas/pepperoni.jpg",
+        "name": "Пепперони",
+        "price": "520",
+        "weight": "535",
+        "quantity": 1,
+        "id": "3"
+      }
+    ]
   }
 }

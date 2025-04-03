@@ -6,17 +6,16 @@
 }
 
 .cart_block{
-
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 300px;
+  min-width: 300px;
   min-height: 468px;
   border-radius: 18px;
   background-color: $cart_bg_color;
 }
 .cart {
-  min-width: 268px;
+  max-width: 268px;
   min-height: 420px;
   display: flex;
   flex-direction: column;
@@ -52,7 +51,7 @@
 }
 
 .cart_items {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

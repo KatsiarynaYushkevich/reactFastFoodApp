@@ -1,3 +1,6 @@
+@use "../style/index.scss" as *;
+@use "../style/vars/_vars.scss" as *;
+
 .header_nav {
   max-width: 1231px;
   display: flex;
@@ -5,7 +8,28 @@
   overflow-x: auto;
   gap: 8px;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
 }
+
+.main {
+  @include flex_style();
+  gap: 30px;
+}
+
+.products_cards{
+  @include flex_style();
+  gap:20px;
+  flex-wrap: wrap;
+}
+
+.main_content{
+  padding-top: 50px;
+
+  h2{
+    margin-bottom: 24px;
+    @include text_style(40px, 600);
+  }
+}
+

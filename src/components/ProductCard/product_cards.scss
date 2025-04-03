@@ -1,0 +1,58 @@
+@use "../../style/index.scss" as *;
+@use "../../style/vars/_vars.scss" as *;
+
+.card_wrapper {
+  @include flex_style();
+  @include flex_items_pos();
+  min-width:  300px;
+  min-height: 411px;
+  background-color: $product_cards_bg_color;
+  border-radius: 18px;
+}
+
+.card {
+  max-width: 276px;
+  min-height: 387px;
+  @include flex_style(column);
+
+  button{
+    @include text_style();
+    min-height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: $product_btn_bg_color;
+  }
+}
+
+.product_info {
+  @include flex_style(column);
+  flex-grow: 1;
+
+  #item_price{
+    @include text_style(24px, 600);
+  }
+
+  #item_name{
+    @include text_style();
+  }
+}
+
+.product_img {
+  width:  276px;
+  height: 220px;
+  margin-bottom: 8px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.product_btn{
+  @include flex_style(column);
+  gap:8px;
+
+  span{
+    @include text_style($f_weight:600, $f_color:$sub_text_color);
+  }
+}

@@ -28,7 +28,7 @@ export default function Nav({stateNavActive}) {
         <>
             {
                 nav.map(item => (
-                    <div className={`nav_item ${navActive.name === item.name ? 'active' : 'f'}`} key={item.id} onClick={() => setNavActive(item)}>
+                    <div className={`nav_item ${navActive.name === item.name ? 'active' : ''}`} key={item.id} onClick={() => setNavActive(item)}>
                         <img src={objIcon[item.icon]} alt={item.name}/>
                         <span>{item.name}</span>
                     </div>
