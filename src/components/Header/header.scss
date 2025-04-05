@@ -6,13 +6,18 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: initial;
-  min-height: 466px;
-  margin-bottom: 33px;
+  margin-bottom: clamp(24px, 2vw + 5px, 33px);
+}
+
+.header_content {
+  padding-top: 24px;
+  gap:24px;
+  @include flex_style($f_direction: column);
+  @include flex_items_pos();
 }
 
 .header_img {
-  max-width: 326px;
-  min-height: 326px;
+  max-width: clamp(227px, 22.5vw,326px);
 
   img {
     width: 100%;
@@ -20,11 +25,13 @@
   }
 }
 
-.header_content {
-  padding-top: 24px;
-  gap:clamp(22px, 2vw - 4px, 24px );
-  @include flex_style($f_direction: column);
-  @include flex_items_pos();
+.header_logo{
+  max-height: 29px;
+  min-width: 150px;
+  img{
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .header_items {
@@ -32,14 +39,16 @@
   gap: clamp(16px, 2vw - 4px, 24px);
   @include flex_items_pos();
   flex-wrap: wrap-reverse;
+  margin-bottom: clamp(30px, 4vw + 5px,63px);
 }
 
 .header_text {
   @include flex_style(column);
+
   gap: clamp(16px, 4vw - 4px, 52px);
 
   h1 {
-    @include text_style(clamp(30px, 3vw + 7px, 50px), 800, $header_main_text_color);
+    @include text_style(3.1rem, 800, $header_main_text_color);
 
     .orange {
       color: $header_sub_text_color;
@@ -47,7 +56,25 @@
   }
 
   .delivery_text {
-    @include text_style(clamp(12px, 1vw + 2px, 16px), $f_color: $header_main_text_color);
+    @include text_style(1rem, $f_color: $header_main_text_color);
   }
 }
+
+@media (max-width:768px) {
+  .header_text  {
+    h1{
+    text-align: center;
+    font-size: clamp(3rem, 1rem + 7vw, 5rem);
+  }
+    .delivery_text{
+      text-align: center;
+      font-size: clamp(1rem, 1rem + 3vw, 2rem);
+    }
+  }
+
+  .header_img {
+    min-width: clamp(227px, 50vw, 500px);
+  }
+}
+
 

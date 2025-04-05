@@ -4,8 +4,8 @@
 .nav_item {
   border-radius: 50px;
   background-color:$header_nav_btn_color;
-  min-height: 40px;
-  min-width: 123px;
+  min-height: clamp(30px, 3vw, 40px);
+  min-width: clamp(97px, 9vw, 123px);
   @include flex_style();
   @include flex_items_pos();
   @include text_style(clamp(12px, 1vw + 2px, 16px));

@@ -1,10 +1,9 @@
 import './App.scss'
 import Header from "../components/Header/Header.jsx";
 import Nav from "../components/Nav/Nav.jsx";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Cart from "../components/Cart/Cart.jsx";
 import cartServer from "../data/cartServer.json"
-import productServer from "../data/productServer.json"
 import ProductCards from "../components/ProductCard/ProductCards.jsx";
 
 function App() {
@@ -19,28 +18,19 @@ function App() {
     const stateCart = {cart, setCart};
     const stateNavActive = {navActive, setNavActive};
 
-    const [product, setProduct] = useState(productServer[navActive.group]);
-    const stateProductActive = {product, setProduct};
-
-    useEffect(() => {
-        const foundProduct = productServer[navActive.group];
-        setProduct(foundProduct);
-    }, [navActive]);
-
     return (
         <>
-            <Header/>
-            <main className='container main_wrapper'>
-                <div className='header_nav'>
+            <header>
+                <Header/>
+                <div className='container header_nav'>
                     <Nav stateNavActive={stateNavActive}/>
                 </div>
+            </header>
+            <main className='container main_wrapper'>
                 <div className='main'>
                     <Cart stateCart={stateCart}/>
                     <div className='main_content'>
-                        <h2>{stateProductActive.product.title}</h2>
-                        <div className='products_cards'>
-                            <ProductCards stateProductActive={stateProductActive}/>
-                        </div>
+                        <ProductCards navActive = {navActive} />
                     </div>
                 </div>
             </main>

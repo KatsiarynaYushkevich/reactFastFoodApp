@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   overflow-x: auto;
-  gap: 8px;
+  gap: 0.55vw;
 
   &::-webkit-scrollbar {
     display: none;
@@ -18,18 +18,18 @@
   gap: 30px;
 }
 
-.products_cards{
-  @include flex_style();
-  gap:20px;
-  flex-wrap: wrap;
-}
-
 .main_content{
   padding-top: 50px;
 
   h2{
     margin-bottom: 24px;
-    @include text_style(40px, 600);
+    @include text_style(2.5rem, 600);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
   }
 }
 

@@ -11,16 +11,8 @@ import desertsIcon from "../../assets/header_assets/deserts_icon.svg"
 import sauceIcon from "../../assets/header_assets/sauce_icon.svg"
 
 export default function Nav({stateNavActive}) {
-    const objIcon = {
-        burgerIcon,
-        snacksIcon,
-        hotdogIcon,
-        comboIcon,
-        burritoIcon,
-        pizzaIcon,
-        noodlesIcon,
-        desertsIcon,
-        sauceIcon
+    const objIcon = {burgerIcon, snacksIcon, hotdogIcon, comboIcon, burritoIcon, pizzaIcon,
+        noodlesIcon, desertsIcon, sauceIcon
     }
 
     const {navActive, setNavActive} = stateNavActive;
