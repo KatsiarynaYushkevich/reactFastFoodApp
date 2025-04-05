@@ -16,6 +16,7 @@
 .main {
   @include flex_style();
   gap: 30px;
+  margin-bottom: 100px;
 }
 
 .main_content{
@@ -25,6 +26,13 @@
     margin-bottom: 24px;
     @include text_style(2.5rem, 600);
   }
+}
+
+.footer{
+  background-color: $footer_bg_color;
+  min-height: 244px;
+  @include flex_style();
+  @include flex_items_pos();
 }
 
 @media (max-width: 768px) {

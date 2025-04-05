@@ -1,0 +1,74 @@
+@use "../../style/index.scss" as *;
+@use "../../style/vars/_vars.scss" as *;
+
+.footer_wrapper {
+  @include flex_style(column);
+  @include flex_items_pos($a_items: space-between, $j_content: start);
+  gap:51px;
+  max-width: 85%;
+}
+
+.footer_info {
+  @include flex_style();
+  @include flex_items_pos($j_content: space-between, $a_items: start);
+}
+
+.footer_logo{
+  max-width: clamp(200px, 21vw + 5px,305px);
+  img{
+    width: 100%;
+  }
+}
+.contacts {
+  @include flex_items_pos($j_content: space-between, $a_items: start);
+  @include flex_style();
+
+  .contact_header {
+    @include text_style($f_size: clamp(18px, 1rem + 1vw, 24px));
+  }
+
+  gap: 50px;
+}
+
+.contacts_info {
+  @include flex_style(column);
+  gap: 24px;
+  a {
+    @include text_style($f_size: clamp(12px, 1rem, 16px));
+    text-decoration: none;
+    gap: 4px;
+  }
+}
+
+.phone {
+  @include flex_style();
+}
+
+.footer_icons{
+  @include flex_style();
+  gap:16px;
+}
+
+.copyrights{
+  @include text_style($f_size: 12px);
+}
+
+@media (max-width: 1024px) {
+  .footer_wrapper {
+    max-width: 97%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer_info {
+   flex-direction: column;
+    gap:36px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contacts {
+    flex-direction: column;
+    gap:24px;
+  }
+}

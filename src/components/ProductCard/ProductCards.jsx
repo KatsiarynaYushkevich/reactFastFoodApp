@@ -5,6 +5,7 @@ export default function ProductCards({navActive}) {
     const {title, items} = productServer[navActive.group];
 
     return (
+
         <>
             <h2>{title}</h2>
             <div className='products_cards'>

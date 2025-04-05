@@ -1,6 +1,6 @@
 import "./header.scss"
 import header_img from "../../assets/header_assets/header_img.png"
-import logo from "../../assets/header_assets/logo.svg"
+import logo from "../../assets/header_assets/header_logo.svg"
 
 export default function Header() {
     return (

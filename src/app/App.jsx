@@ -3,8 +3,9 @@ import Header from "../components/Header/Header.jsx";
 import Nav from "../components/Nav/Nav.jsx";
 import {useState} from "react";
 import Cart from "../components/Cart/Cart.jsx";
-import cartServer from "../data/cartServer.json"
 import ProductCards from "../components/ProductCard/ProductCards.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import cartServer from "../data/cartServer.json"
 
 function App() {
     const [cart, setCart] = useState(cartServer);
@@ -30,10 +31,15 @@ function App() {
                 <div className='main'>
                     <Cart stateCart={stateCart}/>
                     <div className='main_content'>
-                        <ProductCards navActive = {navActive} />
+                        <ProductCards navActive = {navActive}/>
                     </div>
                 </div>
             </main>
+            <footer className='footer'>
+                <div className='container'>
+                <Footer/>
+                </div>
+            </footer>
         </>
     )
 }

@@ -5,14 +5,13 @@
   @include flex_style();
   @include flex_items_pos();
   min-width:  clamp(145px, 20vw, 300px);
-  min-height: clamp(243px, 25vw, 411px);
+  min-height: clamp(243px, 38vw, 411px);
   background-color: $product_cards_bg_color;
   border-radius: 18px;
 }
 
 .card {
   width: 95%;
- height:  90%;
   @include flex_style(column);
   gap:clamp(16px, 2vw, 29px);
 
@@ -63,6 +62,7 @@
 
 .products_cards{
   @include flex_style();
+
   gap:20px;
   flex-wrap: wrap;
 }
@@ -72,4 +72,11 @@
     width: clamp(137px, 18vw - 4px, 276px);
     height: clamp(120px, 16vw, 220px);
     }
+}
+
+@media (max-width: 1024px) {
+  .product_img {
+    width: clamp(137px, 18vw - 4px, 276px);
+    height: clamp(120px, 16vw, 220px);
+  }
 }
