@@ -16,7 +16,7 @@
     "id": "2"
   },
   {
-    "img": "../../assets/burger_img.png",
+    "img": "/src/assets/burger_img.png",
     "name": "Жгучий хот-дог",
     "price": "239",
     "weight": "245",

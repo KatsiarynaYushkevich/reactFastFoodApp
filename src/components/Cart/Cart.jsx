@@ -4,7 +4,7 @@ import "./cart.scss"
 import {changeQuantity} from "./helper/helper.js"
 import {useState} from "react";
 
-export default function Cart({stateCart}) {
+export default function Cart({stateCart, idShowModal, setIdShowModal}) {
     const {cart, setCart} = stateCart;
     const itemsCount = cart.reduce((sum, item) => sum + item.quantity, 0);
     const price = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -16,8 +16,6 @@ export default function Cart({stateCart}) {
     const changeCartVisibility = () => {
         setCartVisible(!cartVisible);
     };
-    console.log(cartVisible);
-
 
     return (
         <div className='cart_wrapper'>
@@ -56,8 +54,7 @@ export default function Cart({stateCart}) {
                         <span>Итого</span>
                         <span>{price}</span>
                     </div>
-                    <button id='order_btn'>Оформить заказ</button>
-
+                    <button id='order_btn' onClick={() => setIdShowModal("delivery")}>Оформить заказ</button>
                     {showDelivery && (
                         <div className='delivery'>
                             <img src={delivery}/>

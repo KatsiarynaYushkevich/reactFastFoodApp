@@ -1,7 +1,7 @@
 import "./product_cards.scss"
 import productServer from "../../data/productServer.json"
 
-export default function ProductCards({navActive}) {
+export default function ProductCards({navActive, setIdShowModal}) {
     const {title, items} = productServer[navActive.group];
 
     return (
@@ -14,7 +14,7 @@ export default function ProductCards({navActive}) {
                         <div className='card'>
                             <div className='product_info'>
                                 <div className='product_img'>
-                                    <img src={item.img} alt={item.name}/>
+                                    <img onClick={() => setIdShowModal(item.id)} src={item.img} alt={item.name}/>
                                 </div>
                                 <span id='item_price'>{item.price}₽</span>
                                 <span id='item_name'>{item.name}</span>
@@ -25,7 +25,6 @@ export default function ProductCards({navActive}) {
                             </div>
                         </div>
                     </div>
-
                 ))}
             </div>
         </>

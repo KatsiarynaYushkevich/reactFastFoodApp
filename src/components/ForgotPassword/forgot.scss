@@ -1,0 +1,11 @@
+@use "../../style/index.scss" as *;
+@use "../../style/vars/_vars.scss" as *;
+.forgot_form_wrapper {
+  margin-top:30px;
+  width: 30vw;
+  height: 15vw;
+  border-radius: 20px;
+  @include flex_style();
+  @include flex_items_pos();
+  background: rgba(255, 171, 8, 0.9);
+}
